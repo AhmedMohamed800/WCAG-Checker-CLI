@@ -1,0 +1,27 @@
+{
+  "name": "wcag-checker-cli",
+  "version": "1.0.0",
+  "description": "> Fast, developer-first accessibility testing for WCAG 2.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedMohamed800/WCAG-Checker-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AhmedMohamed800/WCAG-Checker-CLI/issues"
+  },
+  "homepage": "https://github.com/AhmedMohamed800/WCAG-Checker-CLI#readme",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "commander": "^14.0.3"
+  }
+}
