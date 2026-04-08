@@ -1,10 +1,15 @@
 {
   "name": "wcag-checker-cli",
-  "version": "1.0.0",
-  "description": "> Fast, developer-first accessibility testing for WCAG 2.2",
+  "version": "0.0.1",
+  "bin": {
+    "wcag-checker": "./dist/index.js"
+  },
+  "description": "Fast, developer-first accessibility testing for WCAG 2.2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && node dist/index.js",
+    "dev": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +24,7 @@
   },
   "homepage": "https://github.com/AhmedMohamed800/WCAG-Checker-CLI#readme",
   "devDependencies": {
+    "@types/node": "^25.5.2",
     "typescript": "^6.0.2"
   },
   "dependencies": {
