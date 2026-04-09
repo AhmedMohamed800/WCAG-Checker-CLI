@@ -3,6 +3,7 @@ import { allRules } from "../wcag/index";
 import urlChecker from "../utils/urlChecker";
 import shouldRunRule from "../utils/shouldRunRule";
 import { Issue, ScanOptions, ScanResult } from "./type";
+import getRenderedDocument from "../utils/getRenderdContent";
 
 export async function runScan(
   url: string,
@@ -13,11 +14,7 @@ export async function runScan(
       "Invalid URL format provided. Please provide a valid URL starting with http:// or https://",
     );
   }
-  const res = await fetch(url);
-  const html = await res.text();
-
-  const dom = new JSDOM(html);
-  const document = dom.window.document;
+  const document = await getRenderedDocument(url);
 
   const results: Issue[] = [];
 
