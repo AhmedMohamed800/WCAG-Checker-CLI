@@ -17,6 +17,31 @@ const rule: Rule = {
         });
       }
     });
+
+    // Check area elements in image maps
+    const areas = document.querySelectorAll("area");
+    areas.forEach((area) => {
+      if (!area.hasAttribute("alt")) {
+        issues.push({
+          message: "Area element missing alt attribute",
+          element: area.outerHTML,
+          solution: "Provide a text alternative for the area",
+        });
+      }
+    });
+
+    // Check input elements of type image
+    const imageInputs = document.querySelectorAll("input[type='image']");
+    imageInputs.forEach((input) => {
+      if (!input.hasAttribute("alt") && !input.hasAttribute("title")) {
+        issues.push({
+          message: "Input image missing alt or title attribute",
+          element: input.outerHTML,
+          solution: "Provide a text alternative for the input image",
+        });
+      }
+    });
+
     return issues;
   },
 };

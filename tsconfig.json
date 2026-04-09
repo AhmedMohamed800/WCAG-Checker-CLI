@@ -11,6 +11,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "jest"]
   },
-  "include": ["src/**/*.ts", "tests/utils/urlChecker.test.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
 }

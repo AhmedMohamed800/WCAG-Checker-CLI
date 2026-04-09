@@ -3,7 +3,7 @@ import { allRules } from "../wcag/index";
 import urlChecker from "../utils/urlChecker";
 import shouldRunRule from "../utils/shouldRunRule";
 import { Issue, ScanOptions, ScanResult } from "./type";
-import getRenderedDocument from "../utils/getRenderdContent";
+import getRenderedDocument from "../utils/getRenderedContent";
 
 export async function runScan(
   url: string,
